@@ -5,17 +5,19 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- Header of the page, contains my Logo, and some navigation tools -->
     <header>
         <div class="container">
             <p class="logo">MauriceJP</p>
             <nav>
-                <a href="#">About me</a>
+                <a href="#Aboutme">About me</a>
                 <a href="#">Previous jobs</a>
                 <a href="#">Skills</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero of the page, it's the main thing the people see when they enter to my page -->
     <section id="hero">
         <h1>My Curriculum Vitae</h1>
         <form action="CV english.pdf">
@@ -25,19 +27,21 @@
     </section>
 
 
-    <section id="Actividades">
+    <section id="Aboutme">
        <div class="container">       
         <div class="img-container"></div>
-        <h2>Mis <span class="color-acento">actividades</span></h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ex, architecto enim deserunt, quam quibusdam alias illum asperiores sapiente numquam necessitatibus officia blanditiis ut sequi, perspiciatis laudantium iste culpa eveniet.</p>
-    </div>
+            <h2>About me</h2>
+                <p>I am a development professional with a strong academic background, recognized as an outstanding student at Santa Clara College in Asunción, Paraguay.
+                I have a strong interest in the fields of mechanics and electronics, as well as in web development and programming. </p>
+        </div>
     </section>
 
 
-    <section id="Habilidades">
+    <section id="Skills">
          <div class="container">
-             <h2>Mis habilidades</h2>
-              <div class="carta">
+             <h2>My skills</h2>
+
+        <div class="carta">
                  <h3>Idiomas</h3>
                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
                 <button>Mas informacion</button>
@@ -52,34 +56,57 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
             <button>Mas informacion</button>
         </div>
+        
     </div>
     </section>
 
     <section id="contacto">
         <div class="container">
             <ul>
-                <li>Telefono: +595 986-921291</li>
-                <li>Correo: mjeanpujol04@gmail.com</li>
-                <li>Instagram: @mjeanpujol</li>
-                <li>Linkedin: Maurice Jean Pujol</li>
+                    <li style="display: flex; align-items: center;"><img src="media/phone.png"  height="50" width="50" style="margin-right: 10px;">
+                            +595 986-921291
+                    </li>
+                    <li style="display: flex; align-items: center;">
+                        <a href="mailto:mjeanpujol04@gmail.com" target="_blank" style="display: flex; align-items: center;">
+                            <img src="media/gmail.webp" height="50" width="50" style="margin-right: 10px;">
+                            mjeanpujol04@gmail.com
+                        </a>
+                    </li>                    
+                    <li style="display: flex; align-items: center;">
+                        <a href="https://www.instagram.com/mjeanpujol/" target="_blank" style="display: flex; align-items: center;">
+                            <img src="media/instagram.png" height="50" width="50" style="margin-right: 10px;">
+                            @mjeanpujol
+                        </a>
+                    </li>
+                    <li style="display: flex; align-items: center;">
+                        <a href="https://www.linkedin.com/in/maurice-jean-pujol-zarza/" target="_blank" style="display: flex; align-items: center;">
+                            <img src="media/linkedin-logo.ico" height="50" width="50" style="margin-right: 10px;">
+                            Maurice Jean Pujol
+                        </a>
+                    </li>
+                    
             </ul>
         </div>
     </section>
 
-    <section id="Contactame">
-        <h2>¿Desea contactarme?</h2>
-        <form action="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlHmvxCXxTWDTBTtMwPWjbNvzsdBCxXVddptlPJSzvGBtxwNVhrzNnGLzwwqZJtPRcNhWg">
-            <button>CONTACTO</button>
-        </form>
-            
+    <section id="Contactme">
+        <div class="container">
+            <form action="https://wa.me/595986921291" target="_blank">
+                <button>
+                    <a style="display: flex; align-items: center;">
+                        <img src="media/whatsapp.png" height="50" width="50" style="margin-right: 10px; filter: none !important;">
+                        Send me a whatsapp
+                    </a>                    
+                </button>
+            </form>
+        </div>
     </section>
 
-    <footer>
+    <footer id="MauriceJP">
         <div class="container">
-
             <p>&copy; MJPZ</p>
         </div>
-        </footer>
+    </footer>
 </body>
 </html>
 
