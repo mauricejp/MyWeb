@@ -23,6 +23,7 @@ body {
 
 
 h1{font-size: 50px;     font-family: 'Dela Gothic One', cursive;}
+nav button a{font-size: 20px; font-family: 'Raleway', sans-serif; font-weight: bold;}
 h2{font-size: 50px;}
 h3{font-size: 25px;}
 p{font-size: 25px;}
@@ -32,21 +33,40 @@ li{ font-size: 1.25em;}
 
 /* The CSS code `button{ ... }` is defining the styles for all `<button>` elements in the HTML
 document. */
-form button {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 10px 40px;
-    border-radius: 15px;
-    border: 2px solid rgb(160, 160, 160);
-    box-shadow: 2px 2px 10px rgb(0, 0, 0);
-    color: rgb(255, 247, 247);
-    background: linear-gradient(to right, rgb(127, 2, 158), rgb(252, 134, 252));
-}
-
-form button:hover {
-    background-image: linear-gradient(to right, rgb(127, 2, 158), rgb(241, 197, 241));
-}
+.btn {
+    position: relative;
+    width: 11rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    font-size: 1.2rem;
+    font-weight: 550;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+  }
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 3rem;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    background: linear-gradient(135deg, #3b30d0 0%, #083967 100%);
+    z-index: -1;
+  }
+  
+  .btn:hover {
+    background: #ffffff;
+    background: linear-gradient(135deg, #307bd0 0%, #083967 100%);
+    color: white;
+    font-size: 1.3rem;
+  }
 
 /* The `.container` class sets the maximum width of an element to 1400 pixels and centers it
 horizontally using `margin: auto;`. This is commonly used to create a responsive layout where the
@@ -60,101 +80,85 @@ content is centered and has a maximum width on larger screens. */
 
 
 /* Header section is the one that displays above the hero section */
-header{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,1)
-    )
-    ,url("media/codepattern2.jpg");
-    background-repeat: repeat;
-    background-position: center center;
-    background-blend-mode: normal ; /* Añadida esta línea */
-}
-
-header .logo{
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    color: #ffffff; /* Cambiado el color del texto para mayor contraste */
-    font-size: 2em;
-    font-family: 'Dela Gothic One', cursive;
-    justify-content: space-between; /* Coloca el logo a la izquierda y la navegación a la derecha */
-
-}
-
-header .container{
-
-        display: flex;
-        justify-content: space-between; /* Coloca el logo a la izquierda y la navegación a la derecha */
-        align-items: center;
-        height: 100px; /* Ajusta según tu diseño */
-        padding: 0 10px; /* Ajusta el espacio alrededor del contenido del encabezado */
+    header{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.9),
+            rgba(0,0,0,1)
+        )
+        ,url("media/codepattern2.jpg");
+        background-repeat: repeat;
+        background-position: center center;
+        background-blend-mode: normal ; /* Añadida esta línea */
     }
 
+    header .logo{
+        margin: 0;
+        padding: 25px 30px;
+        font-weight: bold;
+        color: #ffffff; /* Cambiado el color del texto para mayor contraste */
+        font-size: 2em;
+        font-family: 'Dela Gothic One', cursive;
+        justify-content: space-between; /* Coloca el logo a la izquierda y la navegación a la derecha */
+    }
 
-/* Estilos para el boton about me*/
-header nav a#aboutmenav {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Peso del texto */
-    padding: 10px 20px; /* Espaciado interno (arriba y abajo, izquierda y derecha) */
-    margin: 0 10px; /* Espaciado externo (izquierda y derecha) */
-    border: none; /* Quita el borde del botón */
-    border-radius: 5px; /* Añade bordes redondeados */
-    background-color: #800080; /* Color de fondo */
-    color: #ffffff; /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    transition: background-color 0.5s; /* Transición de color de fondo */
-    text-decoration: none;
-}
-/* Estilos al pasar el ratón por encima del botón */
-header nav a#aboutmenav:hover {
-    background-color: #6b026b00; /* Cambia el color de fondo al pasar el ratón */
-}
+    header .container{
 
-/* Estilos para el boton previous jobs*/
-header nav a#previousjobs {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Peso del texto */
-    padding: 10px 20px; /* Espaciado interno (arriba y abajo, izquierda y derecha) */
-    margin: 0 10px; /* Espaciado externo (izquierda y derecha) */
-    border: none; /* Quita el borde del botón */
-    border-radius: 5px; /* Añade bordes redondeados */
-    background-color: #b4b400; /* Color de fondo */
-    color: #ffffff; /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    transition: background-color 0.5s; /* Transición de color de fondo */
-    text-decoration: none;
-}
-/* Estilos al pasar el ratón por encima del botón */
-header nav a#previousjobs:hover {
-    background-color: #6b026b00; /* Cambia el color de fondo al pasar el ratón */
-    color: #ffffff;
-}
-
-/* Estilos para el boton skills*/
-header nav a#skills {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Peso del texto */
-    padding: 10px 20px; /* Espaciado interno (arriba y abajo, izquierda y derecha) */
-    margin: 0 10px; /* Espaciado externo (izquierda y derecha) */
-    border: none; /* Quita el borde del botón */
-    border-radius: 5px; /* Añade bordes redondeados */
-    background-color: #008000; /* Color de fondo */
-    color: #ffffff; /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    transition: background-color 0.5s; /* Transición de color de fondo */
-    text-decoration: none;
-}
-/* Estilos al pasar el ratón por encima del botón */
-header nav a#skills:hover {
-    background-color: #6b026b00; /* Cambia el color de fondo al pasar el ratón */
-}
+            display: flex;
+            justify-content: space-between; /* Coloca el logo a la izquierda y la navegación a la derecha */
+            align-items: center;
+            height: 100px; /* Ajusta según tu diseño */
+            padding: 0 10px; /* Ajusta el espacio alrededor del contenido del encabezado */
+        }
 
 
+    .aboutmebtn, .previousjobsbtn, .skillsbtn{
+        transition: all 0.3s ease-in-out;
+        font-family: "Dosis", sans-serif;
+      }
+      
+      .aboutmebtn, .previousjobsbtn, .skillsbtn{
+        width: 150px;
+        height: 60px;
+        border-radius: 50px;
+        background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+        box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+        outline: none;
+        cursor: pointer;
+        border: none;
+        font-size: 24px;
+        color: white;
+      }
+      
+      .aboutmebtn:hover, .previousjobsbtn:hover, .skillsbtn:hover{
+        transform: translateY(3px);
+        box-shadow: none;
+      }
+      
+      .aboutmebtn:active, .previousjobsbtn:active, .skillsbtn:active {
+        opacity: 0.5;
+      }
+
+      /* Colores de botones */
+
+      .aboutmebtn {
+        /* ... tus propiedades comunes ... */
+        background: linear-gradient(to right, rgb(128, 0, 128), rgb(252, 134, 252));
+        box-shadow: 0 15px 20px -6px rgb(127, 2, 158);
+      }
+      
+      .previousjobsbtn {
+        /* ... tus propiedades comunes ... */
+        background: linear-gradient(to right, rgb(204, 101, 5), rgb(233, 173, 117));
+        box-shadow: 0 15px 20px -6px rgb(204, 101, 5);
+      }
+      
+      .skillsbtn {
+        /* ... tus propiedades comunes ... */
+        background: linear-gradient(to right, rgb(0, 128, 0), rgb(120, 196, 120));
+        box-shadow: 0 15px 20px -6px rgb(0, 128, 0);
+      }
+      
 
 /* Hero of the page, it's the main thing the people see when they enter to my page  */
 #hero{
@@ -228,6 +232,7 @@ header nav a#skills:hover {
     border-radius: 50%;
 }
 
-#MauriceJP .container{
-    text-align: left;
+footer #footer {
+    text-align: center;
+    font-size: 15px; /* Cambia el tamaño del texto según tu preferencia */
 }
