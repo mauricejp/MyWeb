@@ -14,18 +14,37 @@
                 <!-- <a id="aboutmenav" href="#Aboutme">About me</a>
                 <a id="previousjobs" href="#">Previous jobs</a>
                 <a id="skills" href="#Skills">Skills</a> -->
-                <button class="aboutmebtn">
+                <button class="aboutmebtn" onclick="scrollToAboutMe()">
                     <a>About me</a>
                 </button>
-                <button class="previousjobsbtn">
-                    <a>Jobs</a>
-                </button>
-                <button class="skillsbtn">
+                <button class="skillsbtn" onclick="scrollToSkills()">
                     <a>Skills</a>
                 </button>
+                <button class="previousjobsbtn" onclick="goToPreviousJobs()">
+                    <a target="_blank">Jobs</a>
+                </button>
+                
+
             </nav>
         </div>
     </header>
+
+    <script>
+        function scrollToAboutMe() {
+            var aboutmeSection = document.getElementById('Aboutme');
+            aboutmeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToSkills() {
+            var aboutmeSection = document.getElementById('Skills');
+            aboutmeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function goToPreviousJobs() {
+        window.location.href = 'PreviousJobs.html';
+        }
+    </script>
+    
 
     <!-- Hero of the page, it's the main thing the people see when they enter to my page -->
     <section id="hero">
@@ -58,19 +77,22 @@
 
         <div class="carta">
                  <h3>Languages</h3>
-                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique 
+                    officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
         </div>
         <br>
 
         <div class="carta">
                  <h3>Achievements</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique
+                    officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
         </div>
         <br>
 
         <div class="carta">
             <h3>Skills</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique 
+                officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
         </div>
         <br>
         
@@ -116,6 +138,9 @@
                 </a>
                 <a href="https://www.instagram.com/mjeanpujol/" style="--color: #E1306C" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/mauricejp" style="--color: #4078c0" target="_blank">
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </div>
         </div>
