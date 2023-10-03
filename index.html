@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <title>MauriceJP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="CV english.pdf">
+    <link rel="icon" href="media/JP-removebg-preview.png" type="image/x-icon">
 </head>
 <body>
     <!-- Header of the page, contains my Logo, and some navigation tools -->
-    <header>
+    <header class="navbar">
         <div class="container">
-            <p class="logo">MauriceJP</p>
+            <a href="index.html" class="logo"><img height="200" width="200" src="media/JP-removebg-preview.png" alt=""></a>
             <nav>
                 <!-- <a id="aboutmenav" href="#Aboutme">About me</a>
                 <a id="previousjobs" href="#">Previous jobs</a>
@@ -17,34 +20,15 @@
                 <button class="aboutmebtn" onclick="scrollToAboutMe()">
                     <a>About me</a>
                 </button>
-                <button class="skillsbtn" onclick="scrollToSkills()">
-                    <a>Skills</a>
-                </button>
                 <button class="previousjobsbtn" onclick="goToPreviousJobs()">
                     <a target="_blank">Jobs</a>
                 </button>
-                
-
+                <button class="contactbtn" onclick="scrollToContact()">
+                    <a>Contact</a>
+                </button>
             </nav>
         </div>
     </header>
-
-    <script>
-        function scrollToAboutMe() {
-            var aboutmeSection = document.getElementById('Aboutme');
-            aboutmeSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function scrollToSkills() {
-            var aboutmeSection = document.getElementById('Skills');
-            aboutmeSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function goToPreviousJobs() {
-        window.location.href = 'PreviousJobs.html';
-        }
-    </script>
-    
 
     <!-- Hero of the page, it's the main thing the people see when they enter to my page -->
     <section id="hero">
@@ -54,48 +38,45 @@
                 My CV
             </button>
         </form>
-
     </section>
 
 
     <section id="Aboutme">
        <div class="container">       
-        <div class="img-container"></div>
             <h2>About me</h2>
                 <p>I'm 19 years and i'm old from Asunción, Paraguay, currently i'm studying to get accepted to the Universidad Nacional de Asunción, 
                 i am a development professional with a strong academic background, 
                 recognized as an outstanding student at Santa Clara College in Asunción.
                 I have a strong interest in the fields of mechanics and electronics, as well as in web development and programming. I always like to be informed about the most recent 
                 news in the tech field</p>
+
+                <div class="carta">
+                    <h3>Skills</h3>
+                        <p>With a proven track record of teamwork, a strong commitment to be a good leader, proficiency in office suite applications, unwavering dedication to work, and a
+                        natural inclination for self-directed learning, I can bring a comprehensive set of skills and qualities to any professional environment.</p>
+                </div>
+                <br>
+        
+                <div class="carta">
+                     <h3>Languages</h3>
+                         <p>I am a native Spanish speaker, currently studying AS1 level (Advanced Superior 1) at CCPA, with the aim of completing all possible courses in this language.
+                        I also studied French for about 6 months at the Alliance Française, reaching level A1B.</p>
+                </div>
+                <br>
+        
+                <div class="carta">
+                    <h3>Current Studies</h3>
+                          <p>"I am currently studying to secure a spot to study Electronic Engineering at the Polytechnic Faculty of the National University of Asunción.
+                            I have previously completed high school at Santa Clara School with an outstanding average and being a distinguished student among others.</p>
+                </div>
+                <br>
+                
         </div>
     </section>
 
 
-    <section id="Skills">
-         <div class="container">
-             <h2>My skills</h2>
 
-        <div class="carta">
-                 <h3>Languages</h3>
-                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique 
-                    officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
-        </div>
-        <br>
 
-        <div class="carta">
-                 <h3>Achievements</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique
-                    officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
-        </div>
-        <br>
-
-        <div class="carta">
-            <h3>Skills</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem consectetur sint, illo ut nam adipisci vel! Sunt unde dignissimos similique 
-                officia veritatis laborum laudantium? Harum corporis placeat nisi iure ipsam.</p>
-        </div>
-        <br>
-        
     </div>
     </section>
 
@@ -127,6 +108,7 @@
     <section id="contact">
         <div class="container">
             <div class="contacticonsbox">
+                <P>Let's Talk</P>
                 <a href="https://wa.me/595986921291" style="--color: #008000" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
@@ -148,9 +130,11 @@
 <br><br><br>
     <footer>
         <div class="container">
-            <p id="footer">&copy; MJPZ</p>
+            <p id="footer">&copy;MauriceJP</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
