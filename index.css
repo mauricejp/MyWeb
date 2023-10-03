@@ -17,7 +17,6 @@ body {
 }
 
 h1{font-size: 50px;     font-family: 'Dela Gothic One', cursive;}
-nav button a{font-size: 20px; font-family: 'Raleway', sans-serif; font-weight: bold;}
 a {text-decoration: none;}
 h2{font-size: 50px;}
 h3{font-size: 25px;}
@@ -125,8 +124,10 @@ content is centered and has a maximum width on larger screens. */
         font-family: "Dosis", sans-serif;
       }
       
-      .aboutmebtn, .previousjobsbtn, .contactbtn{
-        width: 150px;
+      .aboutmebtn, .previousjobsbtn, .contactbtn {
+        min-width: 150px; /* Establece un ancho mínimo */
+        width: 30%; /* Utiliza porcentaje para hacerlos más adaptables */
+        max-width: 200px; /* Establece un ancho máximo */
         height: 60px;
         border-radius: 50px;
         background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
@@ -134,10 +135,28 @@ content is centered and has a maximum width on larger screens. */
         outline: none;
         cursor: pointer;
         border: none;
-        font-size: 24px;
+        font-size: 20px; font-family: 'Raleway', sans-serif; font-weight: bold;
         color: white;
-      }
-      
+    }
+    
+    /* Botones Dispositivos moviles  */
+    @media (max-width: 767px) {
+    
+        .aboutmebtn, .previousjobsbtn, .contactbtn {
+            min-width: 80px; /* Establece un ancho mínimo */
+            height: 50px; /* Ajusta la altura para dispositivos móviles si es necesario */
+            font-size: 15px; 
+            font-family: 'Raleway', sans-serif; 
+            font-weight: bold;
+            margin-right: 5px; /* Añade espacio entre los botones */
+        }
+
+        .aboutmebtn {
+            /* ... tus propiedades comunes ... */
+            font-size: 14px; 
+          }
+    }
+
       .aboutmebtn:hover, .previousjobsbtn:hover, .contactbtn:hover{
         transform: translateY(3px);
         box-shadow: none;
