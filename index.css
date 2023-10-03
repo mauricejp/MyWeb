@@ -99,10 +99,22 @@ content is centered and has a maximum width on larger screens. */
 
 
 
+/* Estilos generales para tu logo */
+.logo img {
+    vertical-align: middle;
+    padding-bottom: 20px;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 767px) {
     .logo img {
-        vertical-align: middle;
-        padding-bottom: 20px;
+        max-width: 100%; /* Hace que la imagen sea 100% del ancho del contenedor */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        padding-bottom: 10px; /* Ajusta el espacio alrededor de la imagen si es necesario */
+        max-width: 120px;
     }
+}
+
     
     .responsive-img {
         max-width: 100%;
@@ -143,8 +155,10 @@ content is centered and has a maximum width on larger screens. */
     @media (max-width: 767px) {
     
         .aboutmebtn, .previousjobsbtn, .contactbtn {
-            min-width: 80px; /* Establece un ancho mínimo */
-            height: 50px; /* Ajusta la altura para dispositivos móviles si es necesario */
+            min-width: fit-content; /* Establece un ancho mínimo */
+            max-width: fit-content;
+            min-height: 40px;
+            height: auto; /* Permite que la altura se ajuste automáticamente */
             font-size: 15px; 
             font-family: 'Raleway', sans-serif; 
             font-weight: bold;
