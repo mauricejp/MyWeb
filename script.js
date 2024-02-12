@@ -1,18 +1,4 @@
 
-function scrollToAboutMe() {
-    var aboutmeSection = document.getElementById('Aboutme');
-    aboutmeSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToSkills() {
-    var aboutmeSection = document.getElementById('Skills');
-    aboutmeSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-function goToPreviousJobs() {
-window.location.href = 'PreviousJobs.html';
-}
-
 window.onscroll = function() {myFunction()};
 
 var navbar = document.querySelector('.navbar');

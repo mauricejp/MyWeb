@@ -51,23 +51,11 @@ document. */
     letter-spacing: 1px;
     transition: all 0.3s;
   }
-  
-  .btn::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    border-radius: 3rem;
-    width: 100%;
-    height: 100%;
-    padding: 2px;
-    background: linear-gradient(135deg, #3b30d0 0%, #083967 100%);
-    z-index: -1;
-  }
+
   
   .btn:hover {
     background: #ffffff;
-    background: linear-gradient(135deg, #307bd0 0%, #083967 100%);
+    background: linear-gradient(135deg, #BD8D62 0%, #473621 100%);
     color: white;
     font-size: 1.3rem;
   }
@@ -184,19 +172,19 @@ content is centered and has a maximum width on larger screens. */
 
       .aboutmebtn {
         /* ... tus propiedades comunes ... */
-        background: linear-gradient(to right, rgb(128, 0, 128), rgb(252, 134, 252));
+        background: linear-gradient(to top, rgb(128, 0, 128), rgb(0, 0, 0));
         box-shadow: 0 15px 20px -6px rgb(127, 2, 158);
       }
       
       .previousjobsbtn {
         /* ... tus propiedades comunes ... */
-        background: linear-gradient(to right, rgb(204, 101, 5), rgb(233, 173, 117));
+        background: linear-gradient(to top, rgb(204, 101, 5), rgb(0, 0, 0));
         box-shadow: 0 15px 20px -6px rgb(204, 101, 5);
       }
       
       .contactbtn {
         /* ... tus propiedades comunes ... */
-        background: linear-gradient(to right, rgb(0, 128, 0), rgb(120, 196, 120));
+        background: linear-gradient(to top, rgb(0, 128, 0), rgb(0, 0, 0));
         box-shadow: 0 15px 20px -6px rgb(0, 128, 0);
       }
       
@@ -230,7 +218,7 @@ content is centered and has a maximum width on larger screens. */
     /* Sections container */
     #Aboutme .container{
         text-align: center;
-        padding: 400px 12px;
+        padding: 100px 12px;
     }
 
     #Skills .container{
@@ -238,13 +226,10 @@ content is centered and has a maximum width on larger screens. */
         padding: 200px 12px;
     }
 
-    #whatsapp .container{
-        text-align: center;
-        padding: 100px 12px;
-    }
 
     .contacticonsbox {
         text-align: center;
+        padding: 50px 12px;
     }
 
     #contact a {
